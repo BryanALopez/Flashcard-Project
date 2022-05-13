@@ -1,12 +1,12 @@
 import React from "react";
 import CardForm from "./CardForm";
 
-function AddCard( ) {
+function EditCard( ) {
     
     return (
       <div>
-        <CardForm add={true} />
+        <CardForm add={false} />
       </div>
     );
 }
-export default AddCard;
+export default EditCard;
