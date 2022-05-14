@@ -9,7 +9,7 @@ function Home() {
   
   useEffect(() => {
     listDecks()
-    .then(response => setDecks(response));
+    .then(setDecks);
   }, []);
   
   if(decks) {

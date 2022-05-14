@@ -156,11 +156,11 @@ export async function deleteDeck(deckId, signal) {
  * @returns {Promise<Error|*>}
  *  a promise that resolves to the new card, which will have an `id` property.
  */
-export async function createCard(deckId, card, signal) {
+export async function createCard(card, signal) {
   // There is a bug in json-server, if you post to /decks/:deckId/cards the associated deckId is a string
   // and the card is not related to the deck because the data types of the ID's are different.
   const url = `${API_BASE_URL}/cards`;
-  card.deckId = Number(deckId);
+  // card.deckId = Number(deckId);
   const options = {
     method: "POST",
     headers,

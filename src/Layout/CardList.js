@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 function CardList( {card} ) {
 
   const history = useHistory();
-  const handleEdit = () => history.push(`/decks/${card.deckId}/${card.id}/edit`);
+  const handleEdit = () => history.push(`/decks/${card.deckId}/cards/${card.id}/edit`);
   const handleDelete = async () => {
     if (window.confirm("Delete this card?")) await deleteCard(card.id);
     history.go(0); // refresh
